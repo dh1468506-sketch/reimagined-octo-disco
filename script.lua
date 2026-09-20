@@ -23,7 +23,7 @@ Instance.new("UICorner", border).CornerRadius = UDim.new(0, 12)
 local frame = Instance.new("Frame")
 frame.Size = UDim2.fromOffset(200, 150)
 frame.Position = UDim2.new(0.5, -100, 0.5, -75)
-frame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 frame.BorderSizePixel = 0
 frame.Parent = screenGui
 
@@ -56,19 +56,19 @@ status.Size = UDim2.new(1, 0, 0, 20)
 status.Position = UDim2.new(0, 0, 0, 35)
 status.BackgroundTransparency = 1
 status.Text = "Desactivado"
-status.TextColor3 = Color3.fromRGB(255, 80, 80)
-status.TextSize = 15
-status.Font = Enum.Font.GothamBold
+status.TextColor3 = Color3.fromRGB(200, 50, 50)
+status.TextSize = 14
+status.Font = Enum.Font.Gotham
 status.Active = true
 status.Parent = frame
 
 local btn = Instance.new("TextButton")
 btn.Size = UDim2.new(1, -20, 0, 35)
 btn.Position = UDim2.new(0, 10, 0, 65)
-btn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 btn.Text = "Activar"
 btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-btn.TextSize = 16
+btn.TextSize = 15
 btn.Font = Enum.Font.GothamBold
 btn.BorderSizePixel = 0
 btn.Parent = frame
@@ -91,17 +91,16 @@ Instance.new("UICorner", closeBtn).CornerRadius = UDim.new(0, 6)
 local openBtn = Instance.new("TextButton")
 openBtn.Size = UDim2.fromOffset(40, 40)
 openBtn.Position = UDim2.new(0, 10, 1, -50)
-openBtn.BackgroundTransparency = 1
-openBtn.Text = ""
+openBtn.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+openBtn.Text = "Z"
+openBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+openBtn.TextSize = 18
+openBtn.Font = Enum.Font.GothamBold
 openBtn.BorderSizePixel = 0
 openBtn.Visible = false
 openBtn.Parent = screenGui
 
-local openImg = Instance.new("ImageLabel")
-openImg.Size = UDim2.fromScale(1, 1)
-openImg.BackgroundTransparency = 1
-openImg.Image = "rbxassetid://6079537943"
-openImg.Parent = openBtn
+Instance.new("UICorner", openBtn).CornerRadius = UDim.new(0, 8)
 
 closeBtn.MouseButton1Click:Connect(function()
     frame.Visible = false
@@ -136,7 +135,7 @@ end)
 
 UserInput.InputChanged:Connect(function(input)
     if frameDragging and input == frameCurrentTouch then
-        local delta = input.Position - dragStart
+        local delta = input.Position - frameDragStart
         frame.Position = UDim2.new(
             frameStartPos.X.Scale, frameStartPos.X.Offset + delta.X,
             frameStartPos.Y.Scale, frameStartPos.Y.Offset + delta.Y
@@ -213,8 +212,8 @@ btn.MouseButton1Click:Connect(function()
             humanoid.WalkSpeed = 16
         end
         btn.Text = "Activar"
-        btn.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+        btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
         status.Text = "Desactivado"
-        status.TextColor3 = Color3.fromRGB(255, 80, 80)
+        status.TextColor3 = Color3.fromRGB(200, 50, 50)
     end
 end)   
