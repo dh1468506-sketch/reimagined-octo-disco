@@ -1,286 +1,287 @@
 if not game then return end
 if not game:GetService("Players").LocalPlayer then return end
 
-local _0x9BAC = debug and debug.getinfo
-if _0x9BAC then
+local _0x54C1 = debug and debug.getinfo
+if _0x54C1 then
 pcall(function()
-local _0xD481 = _0x9BAC(1)
-if _0xD481 and _0xD481.short_src and _0xD481.short_src:find("Console") then
+local _0x9A9E = _0x54C1(1)
+if _0x9A9E and _0x9A9E.short_src and _0x9A9E.short_src:find("Console") then
 game:GetService("Players").LocalPlayer:Kick("🔒 Debug detectado")
 end
 end)
 end
 
-local _0x68D6 = game:GetService("Players").LocalPlayer
-local _0xAC9A = 0
+local _0xF690 = game:GetService("Players").LocalPlayer
+local _0x7A8B = 0
 pcall(function()
-local _0x302C, _0xEA32, _0xA0C6 = 1158, 8654, 576
-local _0x2A3F = (_0x302C * 10000000) + (_0xEA32 * 1000) + _0xA0C6
-local _0x9B19 = _0x2A3F - 1000000000
-_0xAC9A = _0x9B19 + 1000000000
+local _0x290C, _0xCAA4, _0x5985 = 1158, 8654, 576
+local _0x61C9 = (_0x290C * 10000000) + (_0xCAA4 * 1000) + _0x5985
+local _0xA79B = _0x61C9 - 1000000000
+_0x7A8B = _0xA79B + 1000000000
 end)
 
-local _0x4624 = 0
+local _0x9CA8 = 0
 pcall(function()
-local _0x5314 = {}
-_0x5314[1] = 11588654576
-_0x5314[2] = _0x5314[1] * 2
-_0x5314[3] = _0x5314[2] / 2
-_0x4624 = _0x5314[3]
+local _0x1953 = {}
+_0x1953[1] = 11588654576
+_0x1953[2] = _0x1953[1] * 2
+_0x1953[3] = _0x1953[2] / 2
+_0x9CA8 = _0x1953[3]
 end)
 
-local _0x989D = 0
+local _0xEB4A = 0
 pcall(function()
-local _0x9F93 = 99999999999
-local _0xC31C = 88411345423
-_0x989D = _0x9F93 - _0xC31C
+local _0x1E16 = 99999999999
+local _0x57E7 = 88411345423
+_0xEB4A = _0x1E16 - _0x57E7
 end)
 
-local function _0x2634()
-local _0x8199 = _0x68D6.UserId == _0xAC9A
-local _0x388C = _0x68D6.UserId == _0x4624
-local _0x2E95 = _0x68D6.UserId == _0x989D
-local _0x73A1 = game:GetService("Players").LocalPlayer == _0x68D6
-if not (_0x8199 and _0x388C and _0x2E95 and _0x73A1) then
-pcall(function() _0x68D6:Kick("🔒 Script privado") end)
+local function _0x43D1()
+local _0x0222 = _0xF690.UserId == _0x7A8B
+local _0x4692 = _0xF690.UserId == _0x9CA8
+local _0xFBCD = _0xF690.UserId == _0xEB4A
+local _0xACE8 = game:GetService("Players").LocalPlayer == _0xF690
+if not (_0x0222 and _0x4692 and _0xFBCD and _0xACE8) then
+pcall(function() _0xF690:Kick("🔒 Script privado") end)
 while true do task.wait(999) end
 end
 end
-_0x2634()
+
+_0x43D1()
 
 spawn(function()
 while true do
 task.wait(20)
-pcall(_0x2634)
+pcall(_0x43D1)
 end
 end)
 
-local _0x6308=loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local _0x156A=game:GetService("Players")
-local _0x75BC=_0x156A.LocalPlayer
-local _0xD705=game:GetService("RunService")
-local _0x5785=false
-local _0x754C=50
+local _0x2A99=loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local _0xF98A=game:GetService("Players")
+local _0x5413=_0xF98A.LocalPlayer
+local _0xC70F=game:GetService("RunService")
+local _0xE9CA=false
+local _0x4862=50
 
-local function _0x06E5()
-if _0x5785 then return end
-_0x5785=true
-local _0x61EF=_0x75BC.Character
-if _0x61EF then local _0x0F40=_0x61EF:FindFirstChildOfClass("Humanoid")
-if _0x0F40 then _0x754C=_0x0F40.JumpPower end end
+local function _0xE784()
+if _0xE9CA then return end
+_0xE9CA=true
+local _0x5985=_0x5413.Character
+if _0x5985 then local _0x957B=_0x5985:FindFirstChildOfClass("Humanoid")
+if _0x957B then _0x4862=_0x957B.JumpPower end end
 if hookmetamethod and getnamecallmethod then
-local _0xEAA3
-_0xEAA3=hookmetamethod(game,"__index",function(s,k)
-if _0x5785 and k=="JumpPower"then return _0x754C end
-return _0xEAA3(s,k)
+local _0x4217
+_0x4217=hookmetamethod(game,"__index",function(_0x61C9,k)
+if _0xE9CA and k=="JumpPower"then return _0x4862 end
+return _0x4217(_0x61C9,k)
 end)
 end
-_0x75BC.CharacterAdded:Connect(function(_0x61EF)
+_0x5413.CharacterAdded:Connect(function(_0x5985)
 task.wait(0.5)
-local _0x0F40=_0x61EF:FindFirstChildOfClass("Humanoid")
-if _0x0F40 then _0x754C=_0x0F40.JumpPower end
+local _0x957B=_0x5985:FindFirstChildOfClass("Humanoid")
+if _0x957B then _0x4862=_0x957B.JumpPower end
 end)
 end
 
-local _0x74AA=false
-local _0x7FB6=game:GetService("VirtualUser")
-local _0x84F5=nil
+local _0xD89D=false
+local _0x961D=game:GetService("VirtualUser")
+local _0x1315=nil
 
-local function _0xB16F()
-if _0x84F5 then _0x84F5:Disconnect() end
-_0x84F5=_0x75BC.Idled:Connect(function()
-if _0x74AA then pcall(function() _0x7FB6:CaptureController() _0x7FB6:ClickButton2(Vector2.new()) end) end
+local function _0x0AC7()
+if _0x1315 then _0x1315:Disconnect() end
+_0x1315=_0x5413.Idled:Connect(function()
+if _0xD89D then pcall(function() _0x961D:CaptureController() _0x961D:ClickButton2(Vector2.new()) end) end
 end)
 end
 
-local _0xD079=_0x6308:CreateWindow({Name="ScriptPRIVATE",LoadingTitle="Cargando...",LoadingSubtitle="MÉXICAN_MODIFICADOR🇲🇽",ConfigurationSaving={Enabled=false},KeySystem=true,KeySettings={Title="ScriptPRIVATE",Subtitle="Introduce tu clave",Note="Pide la key a MÉXICAN_MODIFICADOR🇲🇽",FileName="ScriptPRIVATE_Key_"..tick(),SaveKey=false,Key={"PRIVATE"}}})
+local _0xADED=_0x2A99:CreateWindow({Name="ScriptPRIVATE",LoadingTitle="Cargando...",LoadingSubtitle="MÉXICAN_MODIFICADOR🇲🇽",ConfigurationSaving={Enabled=false},KeySystem=true,KeySettings={Title="ScriptPRIVATE",Subtitle="Introduce tu clave",Note="Pide la key a MÉXICAN_MODIFICADOR🇲🇽",FileName="ScriptPRIVATE_Key_"..tick(),SaveKey=false,Key={"PRIVATE"}}})
 
 spawn(function()
-local _0xCB45=game:GetService("CoreGui")
-local _0x338E=_0x75BC:WaitForChild("PlayerGui")
+local _0xB65D=game:GetService("CoreGui")
+local _0xA148=_0x5413:WaitForChild("PlayerGui")
 task.wait(3)
 while true do
 task.wait(0.5)
-local _0xF712=false
-for _,_0xF1F8 in ipairs({_0xCB45,_0x338E}) do
-for _,g in ipairs(_0xF1F8:GetChildren()) do
+local _0x7DD1=false
+for _,_0x8692 in ipairs({_0xB65D,_0xA148}) do
+for _,g in ipairs(_0x8692:GetChildren()) do
 if g:IsA("ScreenGui") and g.Name:lower():find("rayfield") then
 for _,o in ipairs(g:GetDescendants()) do
-if o:IsA("TextBox") and o.Visible and o.Parent.Visible then _0xF712=true break end
+if o:IsA("TextBox") and o.Visible and o.Parent.Visible then _0x7DD1=true break end
 end
 end
 end
 end
-if not _0xF712 then task.wait(1) _0x06E5() _0x74AA=true _0xB16F() print("[ScriptPRIVATE] Listo") break end
+if not _0x7DD1 then task.wait(1) _0xE784() _0xD89D=true _0x0AC7() print("[ScriptPRIVATE] Listo") break end
 end
 end)
 
-local _0x9AF0=_0xD079:CreateTab("Velocidad",4483362458)
-local _0xD5D9=_0xD079:CreateTab("Fly",4483362458)
-local _0xBF4F=_0xD079:CreateTab("Visual",4483362458)
-local _0xF1D3=_0xD079:CreateTab("Collect",4483362458)
+local _0xF6B5=_0xADED:CreateTab("Velocidad",4483362458)
+local _0x190C=_0xADED:CreateTab("Fly",4483362458)
+local _0xAFAD=_0xADED:CreateTab("Visual",4483362458)
+local _0x4818=_0xADED:CreateTab("Collect",4483362458)
 
-local _0x49B3=false
-local _0x11A9=0.5
-_0x9AF0:CreateToggle({Name="WalkSpeed",CurrentValue=false,Flag="WSE",Callback=function(V)
-_0x49B3=V
+local _0x3FD2=false
+local _0x91CC=0.5
+_0xF6B5:CreateToggle({Name="WalkSpeed",CurrentValue=false,Flag="WSE",Callback=function(V)
+_0x3FD2=V
 if V then spawn(function()
-while _0x49B3 do
-local _0x61EF=_0x75BC.Character
-if _0x61EF and _0x61EF:FindFirstChild("HumanoidRootPart") then
-local _0x0F40=_0x61EF.HumanoidRootPart
-local _0xF288=_0x61EF:FindFirstChild("Humanoid")
-if _0xF288 and _0xF288.MoveDirection.Magnitude>0 then _0x0F40.CFrame=_0x0F40.CFrame+(_0xF288.MoveDirection*_0x11A9) end
+while _0x3FD2 do
+local _0x5985=_0x5413.Character
+if _0x5985 and _0x5985:FindFirstChild("HumanoidRootPart") then
+local _0x957B=_0x5985.HumanoidRootPart
+local _0xC0F7=_0x5985:FindFirstChild("Humanoid")
+if _0xC0F7 and _0xC0F7.MoveDirection.Magnitude>0 then _0x957B.CFrame=_0x957B.CFrame+(_0xC0F7.MoveDirection*_0x91CC) end
 end
-_0xD705.Heartbeat:Wait()
+_0xC70F.Heartbeat:Wait()
 end
 end) end
 end})
-_0x9AF0:CreateSlider({Name="Velocidad",Range={0.1,3},Increment=0.1,Suffix="",CurrentValue=0.5,Flag="WSV",Callback=function(V)_0x11A9=V end})
+_0xF6B5:CreateSlider({Name="Velocidad",Range={0.1,3},Increment=0.1,Suffix="",CurrentValue=0.5,Flag="WSV",Callback=function(V)_0x91CC=V end})
 
-local _0x00FF=false
-local _0x8FEC=100
-_0x9AF0:CreateToggle({Name="Velocity",CurrentValue=false,Flag="VS",Callback=function(V)
-_0x00FF=V
+local _0x8A59=false
+local _0x19DC=100
+_0xF6B5:CreateToggle({Name="Velocity",CurrentValue=false,Flag="VS",Callback=function(V)
+_0x8A59=V
 if V then spawn(function()
-while _0x00FF do
-local _0x61EF=_0x75BC.Character
-if _0x61EF and _0x61EF:FindFirstChild("HumanoidRootPart") then
-local _0x0F40=_0x61EF.HumanoidRootPart
-local _0xF288=_0x61EF:FindFirstChild("Humanoid")
-if _0xF288 and _0xF288.MoveDirection.Magnitude>0 then _0x0F40.Velocity=_0xF288.MoveDirection*_0x8FEC else _0x0F40.Velocity=Vector3.new(0,0,0) end
+while _0x8A59 do
+local _0x5985=_0x5413.Character
+if _0x5985 and _0x5985:FindFirstChild("HumanoidRootPart") then
+local _0x957B=_0x5985.HumanoidRootPart
+local _0xC0F7=_0x5985:FindFirstChild("Humanoid")
+if _0xC0F7 and _0xC0F7.MoveDirection.Magnitude>0 then _0x957B.Velocity=_0xC0F7.MoveDirection*_0x19DC else _0x957B.Velocity=Vector3.new(0,0,0) end
 end
-_0xD705.RenderStepped:Wait()
+_0xC70F.RenderStepped:Wait()
 end
 end)
 else
-local _0x61EF=_0x75BC.Character
-if _0x61EF and _0x61EF:FindFirstChild("HumanoidRootPart") then _0x61EF.HumanoidRootPart.AssemblyLinearVelocity=Vector3.zero end
+local _0x5985=_0x5413.Character
+if _0x5985 and _0x5985:FindFirstChild("HumanoidRootPart") then _0x5985.HumanoidRootPart.AssemblyLinearVelocity=Vector3.zero end
 end
 end})
-_0x9AF0:CreateSlider({Name="Velocidad V",Range={50,500},Increment=10,Suffix="",CurrentValue=100,Flag="VV",Callback=function(V)_0x8FEC=V end})
+_0xF6B5:CreateSlider({Name="Velocidad V",Range={50,500},Increment=10,Suffix="",CurrentValue=100,Flag="VV",Callback=function(V)_0x19DC=V end})
 
-local _0x4A71=false
-local _0xA972=5
-_0x9AF0:CreateToggle({Name="TPWalk",CurrentValue=false,Flag="TW",Callback=function(V)
-_0x4A71=V
+local _0xD80C=false
+local _0xC35C=5
+_0xF6B5:CreateToggle({Name="TPWalk",CurrentValue=false,Flag="TW",Callback=function(V)
+_0xD80C=V
 if V then spawn(function()
-while _0x4A71 do
-local _0x61EF=_0x75BC.Character
-if _0x61EF and _0x61EF:FindFirstChild("HumanoidRootPart") then
-local _0x0F40=_0x61EF.HumanoidRootPart
-local _0xF288=_0x61EF:FindFirstChild("Humanoid")
-if _0xF288 and _0xF288.MoveDirection.Magnitude>0 then _0x0F40.CFrame=_0x0F40.CFrame+(_0xF288.MoveDirection*_0xA972) end
+while _0xD80C do
+local _0x5985=_0x5413.Character
+if _0x5985 and _0x5985:FindFirstChild("HumanoidRootPart") then
+local _0x957B=_0x5985.HumanoidRootPart
+local _0xC0F7=_0x5985:FindFirstChild("Humanoid")
+if _0xC0F7 and _0xC0F7.MoveDirection.Magnitude>0 then _0x957B.CFrame=_0x957B.CFrame+(_0xC0F7.MoveDirection*_0xC35C) end
 end
 task.wait(0.1)
 end
 end) end
 end})
-_0x9AF0:CreateSlider({Name="Distancia TP",Range={2,20},Increment=1,Suffix="",CurrentValue=5,Flag="TWD",Callback=function(V)_0xA972=V end})
+_0xF6B5:CreateSlider({Name="Distancia TP",Range={2,20},Increment=1,Suffix="",CurrentValue=5,Flag="TWD",Callback=function(V)_0xC35C=V end})
 
-local _0x7697=false
-local _0xCEE4=50
-local _0x4359=nil
-_0x9AF0:CreateToggle({Name="Bypass Stamina",CurrentValue=false,Flag="STAM",Callback=function(V)
-_0x7697=V
-local _0x61EF=_0x75BC.Character
-if not _0x61EF then return end
-local _0x0F40=_0x61EF:FindFirstChildOfClass("Humanoid")
-if not _0x0F40 then return end
+local _0xEF41=false
+local _0x0A5A=50
+local _0x530C=nil
+_0xF6B5:CreateToggle({Name="Bypass Stamina",CurrentValue=false,Flag="STAM",Callback=function(V)
+_0xEF41=V
+local _0x5985=_0x5413.Character
+if not _0x5985 then return end
+local _0x957B=_0x5985:FindFirstChildOfClass("Humanoid")
+if not _0x957B then return end
 if V then
-_0x0F40.WalkSpeed=_0xCEE4
-_0x4359=_0x0F40:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-if _0x7697 and _0x0F40.WalkSpeed<_0xCEE4 then _0x0F40.WalkSpeed=_0xCEE4 end
+_0x957B.WalkSpeed=_0x0A5A
+_0x530C=_0x957B:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+if _0xEF41 and _0x957B.WalkSpeed<_0x0A5A then _0x957B.WalkSpeed=_0x0A5A end
 end)
 else
-if _0x4359 then _0x4359:Disconnect() _0x4359=nil end
+if _0x530C then _0x530C:Disconnect() _0x530C=nil end
 end
 end})
-_0x9AF0:CreateSlider({Name="Velocidad Bypass",Range={16,200},Increment=1,Suffix="",CurrentValue=50,Flag="BPSPD",Callback=function(V)
-_0xCEE4=V
-if _0x7697 and _0x75BC.Character then
-local _0x0F40=_0x75BC.Character:FindFirstChildOfClass("Humanoid")
-if _0x0F40 then _0x0F40.WalkSpeed=V end
+_0xF6B5:CreateSlider({Name="Velocidad Bypass",Range={16,200},Increment=1,Suffix="",CurrentValue=50,Flag="BPSPD",Callback=function(V)
+_0x0A5A=V
+if _0xEF41 and _0x5413.Character then
+local _0x957B=_0x5413.Character:FindFirstChildOfClass("Humanoid")
+if _0x957B then _0x957B.WalkSpeed=V end
 end
 end})
 
-local _0x6438=false
-local _0x36A9=50
-_0xD5D9:CreateToggle({Name="Fly",CurrentValue=false,Flag="FLYT",Callback=function(V)
-_0x6438=V
-local _0x61EF=_0x75BC.Character
-if not _0x61EF then return end
-local _0x0F40=_0x61EF:FindFirstChildOfClass("Humanoid")
-if not _0x0F40 then return end
-_0x0F40.PlatformStand=V
+local _0xA2D8=false
+local _0xE631=50
+_0x190C:CreateToggle({Name="Fly",CurrentValue=false,Flag="FLYT",Callback=function(V)
+_0xA2D8=V
+local _0x5985=_0x5413.Character
+if not _0x5985 then return end
+local _0x957B=_0x5985:FindFirstChildOfClass("Humanoid")
+if not _0x957B then return end
+_0x957B.PlatformStand=V
 if V then spawn(function()
-while _0x6438 do
-local _0x4FC1=_0x75BC.Character
-if _0x4FC1 and _0x4FC1:FindFirstChild("HumanoidRootPart") then
-local _0x5DB6=_0x4FC1.HumanoidRootPart
-local _0x0722=_0x4FC1:FindFirstChildOfClass("Humanoid")
-local _0xA44A=workspace.CurrentCamera
-if _0x0722 and _0x0722.MoveDirection.Magnitude>0 then
-_0x5DB6.AssemblyLinearVelocity=_0xA44A.CFrame:VectorToWorldSpace(_0x0722.MoveDirection).Unit*_0x36A9
+while _0xA2D8 do
+local _0x4F6E=_0x5413.Character
+if _0x4F6E and _0x4F6E:FindFirstChild("HumanoidRootPart") then
+local _0x0277=_0x4F6E.HumanoidRootPart
+local _0x5914=_0x4F6E:FindFirstChildOfClass("Humanoid")
+local _0x3D8C=workspace.CurrentCamera
+if _0x5914 and _0x5914.MoveDirection.Magnitude>0 then
+_0x0277.AssemblyLinearVelocity=_0x3D8C.CFrame:VectorToWorldSpace(_0x5914.MoveDirection).Unit*_0xE631
 else
-_0x5DB6.AssemblyLinearVelocity=Vector3.zero
+_0x0277.AssemblyLinearVelocity=Vector3.zero
 end
 end
-_0xD705.RenderStepped:Wait()
+_0xC70F.RenderStepped:Wait()
 end
 end)
 else
-if _0x0F40 then _0x0F40.PlatformStand=false end
-local _0x4FC1=_0x75BC.Character
-if _0x4FC1 and _0x4FC1:FindFirstChild("HumanoidRootPart") then _0x4FC1.HumanoidRootPart.AssemblyLinearVelocity=Vector3.zero end
+if _0x957B then _0x957B.PlatformStand=false end
+local _0x4F6E=_0x5413.Character
+if _0x4F6E and _0x4F6E:FindFirstChild("HumanoidRootPart") then _0x4F6E.HumanoidRootPart.AssemblyLinearVelocity=Vector3.zero end
 end
 end})
-_0xD5D9:CreateSlider({Name="Fly Speed",Range={10,300},Increment=5,Suffix="",CurrentValue=50,Flag="FLYV",Callback=function(V)_0x36A9=V end})
+_0x190C:CreateSlider({Name="Fly Speed",Range={10,300},Increment=5,Suffix="",CurrentValue=50,Flag="FLYV",Callback=function(V)_0xE631=V end})
 
-local _0xCFC1=false
-local _0x634F=50
-local _0x8A13=50
-_0xD5D9:CreateToggle({Name="Jump Power",CurrentValue=false,Flag="JPT",Callback=function(V)
-_0xCFC1=V
-local _0x61EF=_0x75BC.Character
-local _0x0F40=_0x61EF and _0x61EF:FindFirstChildOfClass("Humanoid")
-if not _0x0F40 then return end
+local _0xAF45=false
+local _0x5F2D=50
+local _0xE07D=50
+_0x190C:CreateToggle({Name="Jump Power",CurrentValue=false,Flag="JPT",Callback=function(V)
+_0xAF45=V
+local _0x5985=_0x5413.Character
+local _0x957B=_0x5985 and _0x5985:FindFirstChildOfClass("Humanoid")
+if not _0x957B then return end
 if V then
-if _0x0F40.UseJumpPower then _0x8A13=_0x0F40.JumpPower else _0x8A13=_0x0F40.JumpHeight*5 end
+if _0x957B.UseJumpPower then _0xE07D=_0x957B.JumpPower else _0xE07D=_0x957B.JumpHeight*5 end
 spawn(function()
-while _0xCFC1 do
-local _0x4FC1=_0x75BC.Character
-if _0x4FC1 then
-local _0x287C=_0x4FC1:FindFirstChildOfClass("Humanoid")
-if _0x287C then _0x287C.UseJumpPower=true _0x287C.JumpPower=_0x634F end
+while _0xAF45 do
+local _0x4F6E=_0x5413.Character
+if _0x4F6E then
+local _0xD3AB=_0x4F6E:FindFirstChildOfClass("Humanoid")
+if _0xD3AB then _0xD3AB.UseJumpPower=true _0xD3AB.JumpPower=_0x5F2D end
 end
-_0xD705.Heartbeat:Wait()
+_0xC70F.Heartbeat:Wait()
 end
 end)
 else
-_0x0F40.JumpPower=_0x8A13
+_0x957B.JumpPower=_0xE07D
 end
 end})
-_0xD5D9:CreateSlider({Name="JumpPower Valor",Range={50,500},Increment=10,Suffix="",CurrentValue=50,Flag="JPV",Callback=function(V)_0x634F=V end})
+_0x190C:CreateSlider({Name="JumpPower Valor",Range={50,500},Increment=10,Suffix="",CurrentValue=50,Flag="JPV",Callback=function(V)_0x5F2D=V end})
 
-local _0x5AF5=false
-_0xD5D9:CreateToggle({Name="Noclip",CurrentValue=false,Flag="NOCLIP",Callback=function(V)
-_0x5AF5=V
+local _0xA909=false
+_0x190C:CreateToggle({Name="Noclip",CurrentValue=false,Flag="NOCLIP",Callback=function(V)
+_0xA909=V
 if V then spawn(function()
-while _0x5AF5 do
-local _0x61EF=_0x75BC.Character
-if _0x61EF then
-for _,p in ipairs(_0x61EF:GetDescendants()) do
+while _0xA909 do
+local _0x5985=_0x5413.Character
+if _0x5985 then
+for _,p in ipairs(_0x5985:GetDescendants()) do
 if p:IsA("BasePart") and p.CanCollide then p.CanCollide=false end
 end
 end
-_0xD705.Stepped:Wait()
+_0xC70F.Stepped:Wait()
 end
 end)
 else
-local _0x61EF=_0x75BC.Character
-if _0x61EF then
-for _,p in ipairs(_0x61EF:GetDescendants()) do
+local _0x5985=_0x5413.Character
+if _0x5985 then
+for _,p in ipairs(_0x5985:GetDescendants()) do
 if p:IsA("BasePart") and p.Name~="HumanoidRootPart"and p.Name~="Head"then
 pcall(function() p.CanCollide=true end)
 end
@@ -289,101 +290,101 @@ end
 end
 end})
 
-local _0x1F7F=false
-local _0xCF36=nil
-local _0xDD02=nil
-local _0xFF02=100
-_0xD5D9:CreateToggle({Name="Anti Fall Damage",CurrentValue=false,Flag="NOFALL",Callback=function(V)
-_0x1F7F=V
-local _0x61EF=_0x75BC.Character
-if not _0x61EF then return end
-local _0x0F40=_0x61EF:FindFirstChildOfClass("Humanoid")
-if not _0x0F40 then return end
+local _0xB1CC=false
+local _0x23DF=nil
+local _0x726D=nil
+local _0xDE7B=100
+_0x190C:CreateToggle({Name="Anti Fall Damage",CurrentValue=false,Flag="NOFALL",Callback=function(V)
+_0xB1CC=V
+local _0x5985=_0x5413.Character
+if not _0x5985 then return end
+local _0x957B=_0x5985:FindFirstChildOfClass("Humanoid")
+if not _0x957B then return end
 if V then
-_0xFF02=_0x0F40.Health
-pcall(function() _0x0F40:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false) _0x0F40:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false) end)
-_0xDD02=_0x0F40.StateChanged:Connect(function(_,n)
-if _0x1F7F and n==Enum.HumanoidStateType.FallingDown then
-pcall(function() _0x0F40:ChangeState(Enum.HumanoidStateType.Running) end)
+_0xDE7B=_0x957B.Health
+pcall(function() _0x957B:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false) _0x957B:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false) end)
+_0x726D=_0x957B.StateChanged:Connect(function(_,n)
+if _0xB1CC and n==Enum.HumanoidStateType.FallingDown then
+pcall(function() _0x957B:ChangeState(Enum.HumanoidStateType.Running) end)
 end
 end)
-_0xCF36=_0x0F40.HealthChanged:Connect(function(n)
-if _0x1F7F then
-if n<_0xFF02 then _0x0F40.Health=_0xFF02 else _0xFF02=n end
+_0x23DF=_0x957B.HealthChanged:Connect(function(n)
+if _0xB1CC then
+if n<_0xDE7B then _0x957B.Health=_0xDE7B else _0xDE7B=n end
 end
 end)
 else
-pcall(function() _0x0F40:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true) _0x0F40:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true) end)
-if _0xDD02 then _0xDD02:Disconnect() _0xDD02=nil end
-if _0xCF36 then _0xCF36:Disconnect() _0xCF36=nil end
+pcall(function() _0x957B:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true) _0x957B:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true) end)
+if _0x726D then _0x726D:Disconnect() _0x726D=nil end
+if _0x23DF then _0x23DF:Disconnect() _0x23DF=nil end
 end
 end})
-_0x75BC.CharacterAdded:Connect(function(ch)
+_0x5413.CharacterAdded:Connect(function(ch)
 task.wait(1)
-if _0x1F7F then
-local _0x0F40=ch:FindFirstChildOfClass("Humanoid")
-if _0x0F40 then
-_0xFF02=_0x0F40.Health
-pcall(function() _0x0F40:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false) _0x0F40:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false) end)
-if _0xDD02 then _0xDD02:Disconnect() end
-if _0xCF36 then _0xCF36:Disconnect() end
-_0xDD02=_0x0F40.StateChanged:Connect(function(_,n)
-if _0x1F7F and n==Enum.HumanoidStateType.FallingDown then
-pcall(function() _0x0F40:ChangeState(Enum.HumanoidStateType.Running) end)
+if _0xB1CC then
+local _0x957B=ch:FindFirstChildOfClass("Humanoid")
+if _0x957B then
+_0xDE7B=_0x957B.Health
+pcall(function() _0x957B:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false) _0x957B:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false) end)
+if _0x726D then _0x726D:Disconnect() end
+if _0x23DF then _0x23DF:Disconnect() end
+_0x726D=_0x957B.StateChanged:Connect(function(_,n)
+if _0xB1CC and n==Enum.HumanoidStateType.FallingDown then
+pcall(function() _0x957B:ChangeState(Enum.HumanoidStateType.Running) end)
 end
 end)
-_0xCF36=_0x0F40.HealthChanged:Connect(function(n)
-if _0x1F7F then
-if n<_0xFF02 then _0x0F40.Health=_0xFF02 else _0xFF02=n end
+_0x23DF=_0x957B.HealthChanged:Connect(function(n)
+if _0xB1CC then
+if n<_0xDE7B then _0x957B.Health=_0xDE7B else _0xDE7B=n end
 end
 end)
 end
 end
 end)
 
-local _0x5212=false
-local _0x8F98={}
-local function _0x5952()
-local _0x5A6C=game:GetService("Lighting")
-_0x8F98={Brightness=_0x5A6C.Brightness,ClockTime=_0x5A6C.ClockTime,GlobalShadows=_0x5A6C.GlobalShadows,Ambient=_0x5A6C.Ambient,OutdoorAmbient=_0x5A6C.OutdoorAmbient,FogEnd=_0x5A6C.FogEnd,FogStart=_0x5A6C.FogStart,FogColor=_0x5A6C.FogColor,ExposureCompensation=_0x5A6C.ExposureCompensation}
+local _0x19A6=false
+local _0x3696={}
+local function _0x05CF()
+local _0x5B3C=game:GetService("Lighting")
+_0x3696={Brightness=_0x5B3C.Brightness,ClockTime=_0x5B3C.ClockTime,GlobalShadows=_0x5B3C.GlobalShadows,Ambient=_0x5B3C.Ambient,OutdoorAmbient=_0x5B3C.OutdoorAmbient,FogEnd=_0x5B3C.FogEnd,FogStart=_0x5B3C.FogStart,FogColor=_0x5B3C.FogColor,ExposureCompensation=_0x5B3C.ExposureCompensation}
 end
-local function _0x472C()
-local _0x5A6C=game:GetService("Lighting")
-_0x5A6C.Brightness=2 _0x5A6C.ClockTime=12 _0x5A6C.GlobalShadows=false
-_0x5A6C.Ambient=Color3.fromRGB(178,178,178) _0x5A6C.OutdoorAmbient=Color3.fromRGB(178,178,178)
-_0x5A6C.FogEnd=100000 _0x5A6C.FogStart=0 _0x5A6C.FogColor=Color3.fromRGB(200,200,200)
-_0x5A6C.ExposureCompensation=0.5
+local function _0xA713()
+local _0x5B3C=game:GetService("Lighting")
+_0x5B3C.Brightness=2 _0x5B3C.ClockTime=12 _0x5B3C.GlobalShadows=false
+_0x5B3C.Ambient=Color3.fromRGB(178,178,178) _0x5B3C.OutdoorAmbient=Color3.fromRGB(178,178,178)
+_0x5B3C.FogEnd=100000 _0x5B3C.FogStart=0 _0x5B3C.FogColor=Color3.fromRGB(200,200,200)
+_0x5B3C.ExposureCompensation=0.5
 end
-local function _0xB48F()
-local _0x5A6C=game:GetService("Lighting")
-if _0x8F98.Brightness then
-_0x5A6C.Brightness=_0x8F98.Brightness _0x5A6C.ClockTime=_0x8F98.ClockTime _0x5A6C.GlobalShadows=_0x8F98.GlobalShadows
-_0x5A6C.Ambient=_0x8F98.Ambient _0x5A6C.OutdoorAmbient=_0x8F98.OutdoorAmbient
-_0x5A6C.FogEnd=_0x8F98.FogEnd _0x5A6C.FogStart=_0x8F98.FogStart _0x5A6C.FogColor=_0x8F98.FogColor
-_0x5A6C.ExposureCompensation=_0x8F98.ExposureCompensation
+local function _0x9012()
+local _0x5B3C=game:GetService("Lighting")
+if _0x3696.Brightness then
+_0x5B3C.Brightness=_0x3696.Brightness _0x5B3C.ClockTime=_0x3696.ClockTime _0x5B3C.GlobalShadows=_0x3696.GlobalShadows
+_0x5B3C.Ambient=_0x3696.Ambient _0x5B3C.OutdoorAmbient=_0x3696.OutdoorAmbient
+_0x5B3C.FogEnd=_0x3696.FogEnd _0x5B3C.FogStart=_0x3696.FogStart _0x5B3C.FogColor=_0x3696.FogColor
+_0x5B3C.ExposureCompensation=_0x3696.ExposureCompensation
 end
 end
-_0xBF4F:CreateToggle({Name="Fullbright",CurrentValue=false,Flag="FB",Callback=function(V)
-_0x5212=V
-if V then _0x5952() _0x472C() spawn(function() while _0x5212 do _0x472C() task.wait(1) end end) else _0xB48F() end
+_0xAFAD:CreateToggle({Name="Fullbright",CurrentValue=false,Flag="FB",Callback=function(V)
+_0x19A6=V
+if V then _0x05CF() _0xA713() spawn(function() while _0x19A6 do _0xA713() task.wait(1) end end) else _0x9012() end
 end})
 
-local _0x2DD7=false
-local _0xEA62={}
-_0xBF4F:CreateToggle({Name="Wallhack",CurrentValue=false,Flag="WH",Callback=function(V)
-_0x2DD7=V
+local _0x2BF9=false
+local _0xACB5={}
+_0xAFAD:CreateToggle({Name="Wallhack",CurrentValue=false,Flag="WH",Callback=function(V)
+_0x2BF9=V
 if V then
 spawn(function()
-while _0x2DD7 do
+while _0x2BF9 do
 for _,obj in ipairs(workspace:GetDescendants()) do
 if obj:IsA("BasePart") and not obj:FindFirstChildOfClass("Humanoid") then
-if not _0x75BC.Character or not obj:IsDescendantOf(_0x75BC.Character) then
-local _0x1CC6=obj.Parent
-if _0x1CC6 and _0x1CC6.Name~="Ayuwoki"then
-if _0x1CC6.Name~="Mapa"and _0x1CC6.Name~="Vendas"and _0x1CC6.Name~="Camara"and _0x1CC6.Name~="Soda"and _0x1CC6.Name~="BarraEnergetica"and _0x1CC6.Name~="Rastreador"and _0x1CC6.Name~="Escoba"then
-if not _0x156A:GetPlayerFromCharacter(_0x1CC6) then
+if not _0x5413.Character or not obj:IsDescendantOf(_0x5413.Character) then
+local _0x1DE2=obj.Parent
+if _0x1DE2 and _0x1DE2.Name~="Ayuwoki"then
+if _0x1DE2.Name~="Mapa"and _0x1DE2.Name~="Vendas"and _0x1DE2.Name~="Camara"and _0x1DE2.Name~="Soda"and _0x1DE2.Name~="BarraEnergetica"and _0x1DE2.Name~="Rastreador"and _0x1DE2.Name~="Escoba"then
+if not _0xF98A:GetPlayerFromCharacter(_0x1DE2) then
 pcall(function() obj.LocalTransparencyModifier=0.95 end)
-_0xEA62[obj]=true
+_0xACB5[obj]=true
 end
 end
 end
@@ -394,162 +395,164 @@ task.wait(0.3)
 end
 end)
 else
-for obj,_ in pairs(_0xEA62) do
+for obj,_ in pairs(_0xACB5) do
 if obj and obj.Parent then
 pcall(function() obj.LocalTransparencyModifier=0 end)
 end
 end
-_0xEA62={}
+_0xACB5={}
 end
 end})
 
-local _0x51EF=false
-local _0xAADE={}
-local _0x622F=0
-local function _0xFCE6(o)
+local _0xAB3C=false
+local _0x4948={}
+local _0x703D=0
+local function _0x5CC2(o)
 if not o or not o:IsA("Model") then return end
-if _0xAADE[o] then return end
-local _0xB6A1=Instance.new("Highlight")
-_0xB6A1.FillColor=Color3.fromRGB(255,0,0)
-_0xB6A1.OutlineColor=Color3.fromRGB(255,255,255)
-_0xB6A1.FillTransparency=0.3
-_0xB6A1.OutlineTransparency=0
-_0xB6A1.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
-_0xB6A1.Parent=o
-_0xAADE[o]={_0x0F40=_0xB6A1}
+if _0x4948[o] then return end
+local _0x8381=Instance.new("Highlight")
+_0x8381.FillColor=Color3.fromRGB(255,0,0)
+_0x8381.OutlineColor=Color3.fromRGB(255,255,255)
+_0x8381.FillTransparency=0.3
+_0x8381.OutlineTransparency=0
+_0x8381.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
+_0x8381.Parent=o
+_0x4948[o]={_0x957B=_0x8381}
 end
-_0xBF4F:CreateToggle({Name="ESP Ayuwoki",CurrentValue=false,Flag="ESPA",Callback=function(V)
-_0x51EF=V
+_0xAFAD:CreateToggle({Name="ESP Ayuwoki",CurrentValue=false,Flag="ESPA",Callback=function(V)
+_0xAB3C=V
 if V then spawn(function()
-while _0x51EF do
-_0x622F=_0x622F+0.02
-if _0x622F>1 then _0x622F=0 end
-local _0x1BF3=Color3.fromHSV(_0x622F,1,1)
+while _0xAB3C do
+_0x703D=_0x703D+0.02
+if _0x703D>1 then _0x703D=0 end
+local _0x989D=Color3.fromHSV(_0x703D,1,1)
 for _,o in ipairs(workspace:GetDescendants()) do
 if o:IsA("Model") and o.Name=="Ayuwoki"then
-_0xFCE6(o)
-if _0xAADE[o] and _0xAADE[o].h then _0xAADE[o].h.FillColor=_0x1BF3 end
+_0x5CC2(o)
+if _0x4948[o] and _0x4948[o].h then _0x4948[o].h.FillColor=_0x989D end
 end
 end
-for o,_0xAA2A in pairs(_0xAADE) do
+for o,_0x2559 in pairs(_0x4948) do
 if not o.Parent then
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
-_0xAADE[o]=nil
+if _0x2559.h then _0x2559.h:Destroy() end
+_0x4948[o]=nil
 end
 end
 task.wait(0.05)
 end
 end)
 else
-for o,_0xAA2A in pairs(_0xAADE) do
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
+for o,_0x2559 in pairs(_0x4948) do
+if _0x2559.h then _0x2559.h:Destroy() end
 end
-_0xAADE={}
+_0x4948={}
 end
 end})
 
-local _0x541D=false
-local _0x904B={}
-local _0x2D14={"Mapa","Vendas","Camara","Soda","BarraEnergetica","Rastreador","Escoba"}
-local function _0x5502(n)
-for _,x in ipairs(_0x2D14) do if x==n then return true end end
+local _0x0301=false
+local _0x1C25={}
+local _0x8FB3={"Mapa","Vendas","Camara","Soda","BarraEnergetica","Rastreador","Escoba"}
+local function _0xD5A7(n)
+for _,_0x1E16 in ipairs(_0x8FB3) do if _0x1E16==n then return true end end
 return false
 end
-local function _0xF8CB(_0xF288)
-if not _0xF288 or not _0xF288:IsA("Model") then return end
-if _0x904B[_0xF288] then return end
-local _0xABA4=_0xF288:FindFirstChild("Handle") or _0xF288.PrimaryPart
-if not _0xABA4 then
-for _,v in ipairs(_0xF288:GetChildren()) do if v:IsA("BasePart") then _0xABA4=v break end end
+local function _0x6FEC(_0xC0F7)
+if not _0xC0F7 or not _0xC0F7:IsA("Model") then return end
+if _0x1C25[_0xC0F7] then return end
+local _0x1155=_0xC0F7:FindFirstChild("Handle") or _0xC0F7.PrimaryPart
+if not _0x1155 then
+for _,v in ipairs(_0xC0F7:GetChildren()) do if v:IsA("BasePart") then _0x1155=v break end end
 end
-if not _0xABA4 then return end
-local _0xB6A1=Instance.new("Highlight")
-_0xB6A1.FillColor=Color3.fromRGB(255,255,0)
-_0xB6A1.OutlineColor=Color3.fromRGB(255,255,255)
-_0xB6A1.FillTransparency=0.3
-_0xB6A1.OutlineTransparency=0
-_0xB6A1.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
-_0xB6A1.Parent=_0xF288
-_0x904B[_0xF288]={_0x0F40=_0xB6A1}
+if not _0x1155 then return end
+local _0x8381=Instance.new("Highlight")
+_0x8381.FillColor=Color3.fromRGB(255,255,0)
+_0x8381.OutlineColor=Color3.fromRGB(255,255,255)
+_0x8381.FillTransparency=0.3
+_0x8381.OutlineTransparency=0
+_0x8381.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
+_0x8381.Parent=_0xC0F7
+_0x1C25[_0xC0F7]={_0x957B=_0x8381}
 end
-_0xBF4F:CreateToggle({Name="ESP Objetos",CurrentValue=false,Flag="ESPOBJ",Callback=function(V)
-_0x541D=V
+_0xAFAD:CreateToggle({Name="ESP Objetos",CurrentValue=false,Flag="ESPOBJ",Callback=function(V)
+_0x0301=V
 if V then spawn(function()
-while _0x541D do
+while _0x0301 do
 for _,o in ipairs(workspace:GetDescendants()) do
-if o:IsA("Model") and _0x5502(o.Name) then _0xF8CB(o) end
+if o:IsA("Model") and _0xD5A7(o.Name) then _0x6FEC(o) end
 end
-for _0xF288,_0xAA2A in pairs(_0x904B) do
-if not _0xF288.Parent then
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
-_0x904B[_0xF288]=nil
+for _0xC0F7,_0x2559 in pairs(_0x1C25) do
+if not _0xC0F7.Parent then
+if _0x2559.h then _0x2559.h:Destroy() end
+_0x1C25[_0xC0F7]=nil
 end
 end
 task.wait(1)
 end
 end)
 else
-for _0xF288,_0xAA2A in pairs(_0x904B) do
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
+for _0xC0F7,_0x2559 in pairs(_0x1C25) do
+if _0x2559.h then _0x2559.h:Destroy() end
 end
-_0x904B={}
+_0x1C25={}
 end
 end})
 
-local _0x9653=false
-local _0x5C02={}
-local function _0x45E6(j,ps)
-if not ps or _0x5C02[j] then return end
-local _0xB6A1=Instance.new("Highlight")
-_0xB6A1.FillColor=Color3.fromRGB(0,255,0)
-_0xB6A1.OutlineColor=Color3.fromRGB(255,255,255)
-_0xB6A1.FillTransparency=0.3
-_0xB6A1.OutlineTransparency=0
-_0xB6A1.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
-_0xB6A1.Parent=ps
-_0x5C02[j]={_0x0F40=_0xB6A1,pe=ps}
+local _0x1A7E=false
+local _0x9774={}
+local function _0xB901(j,ps)
+if not ps or _0x9774[j] then return end
+local _0x8381=Instance.new("Highlight")
+_0x8381.FillColor=Color3.fromRGB(0,255,0)
+_0x8381.OutlineColor=Color3.fromRGB(255,255,255)
+_0x8381.FillTransparency=0.3
+_0x8381.OutlineTransparency=0
+_0x8381.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop
+_0x8381.Parent=ps
+_0x9774[j]={_0x957B=_0x8381,pe=ps}
 end
-_0xBF4F:CreateToggle({Name="ESP Jugadores",CurrentValue=false,Flag="ESPP",Callback=function(V)
-_0x9653=V
+_0xAFAD:CreateToggle({Name="ESP Jugadores",CurrentValue=false,Flag="ESPP",Callback=function(V)
+_0x1A7E=V
 if V then
-for _,j in ipairs(_0x156A:GetPlayers()) do
-if j~=_0x75BC and j.Character then _0x45E6(j,j.Character) end
-end
 spawn(function()
-while _0x9653 do
-for _,j in ipairs(_0x156A:GetPlayers()) do
-if j~=_0x75BC and j.Character and not _0x5C02[j] then _0x45E6(j,j.Character) end
+while _0x1A7E do
+for _,j in ipairs(_0xF98A:GetPlayers()) do
+if not _0x1A7E then break end
+if j~=_0x5413 and j.Character and not _0x9774[j] then _0xB901(j,j.Character) end
 end
-for j,_0xAA2A in pairs(_0x5C02) do
-if not _0xAA2A.pe or not _0xAA2A.pe.Parent then
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
-_0x5C02[j]=nil
+for j,_0x2559 in pairs(_0x9774) do
+if not _0x2559.pe or not _0x2559.pe.Parent then
+if _0x2559.h then _0x2559.h:Destroy() end
+_0x9774[j]=nil
 end
 end
 task.wait(1)
 end
+for _,_0x2559 in pairs(_0x9774) do
+if _0x2559.h then _0x2559.h:Destroy() end
+end
+_0x9774={}
 end)
 else
-for _,_0xAA2A in pairs(_0x5C02) do
-if _0xAA2A.h then _0xAA2A.h:Destroy() end
+for _,_0x2559 in pairs(_0x9774) do
+if _0x2559.h then _0x2559.h:Destroy() end
 end
-_0x5C02={}
+_0x9774={}
 end
 end})
 
-local _0x9B70=false
-local _0xDDB1={}
-local function _0xC37E()
-local _0xF1F8={game:GetService("CoreGui"),_0x75BC:FindFirstChild("PlayerGui")}
-for _,l in ipairs(_0xF1F8) do
+local _0xEDAD=false
+local _0xD722={}
+local function _0x8387()
+local _0x8692={game:GetService("CoreGui"),_0x5413:FindFirstChild("PlayerGui")}
+for _,l in ipairs(_0x8692) do
 if l then
 for _,g in ipairs(l:GetChildren()) do
 if g:IsA("ScreenGui") and not g.Name:lower():find("rayfield") and not g.Name:lower():find("scriptprivate") then
 for _,o in ipairs(g:GetDescendants()) do
 if o:IsA("TextLabel") then
-local _0xA657=o.Text:lower()
-if _0xA657:find("cego") or _0xA657:find("blind") or _0xA657:find("stun") then
-if g.Enabled then g.Enabled=false _0xDDB1[g]=true end
+local _0x1953=o.Text:lower()
+if _0x1953:find("cego") or _0x1953:find("blind") or _0x1953:find("stun") then
+if g.Enabled then g.Enabled=false _0xD722[g]=true end
 break
 end
 end
@@ -561,8 +564,8 @@ end
 end
 spawn(function()
 task.wait(10)
-local _0x4F77=game:GetService("ReplicatedStorage")
-for _,o in ipairs(_0x4F77:GetDescendants()) do
+local _0x95F8=game:GetService("ReplicatedStorage")
+for _,o in ipairs(_0x95F8:GetDescendants()) do
 if o:IsA("RemoteEvent") and o.Name=="BlindPlayer"and getconnections then
 for _,cn in ipairs(getconnections(o.OnClientEvent)) do
 pcall(function() cn:Disconnect() end)
@@ -571,56 +574,56 @@ print("[AntiCeguera] BlindPlayer bloqueado")
 end
 end
 end)
-_0xBF4F:CreateToggle({Name="Anti Ceguera",CurrentValue=false,Flag="NOCEG",Callback=function(V)
-_0x9B70=V
+_0xAFAD:CreateToggle({Name="Anti Ceguera",CurrentValue=false,Flag="NOCEG",Callback=function(V)
+_0xEDAD=V
 if V then
 spawn(function()
-while _0x9B70 do
-pcall(_0xC37E)
+while _0xEDAD do
+pcall(_0x8387)
 task.wait(0.2)
 end
 end)
 else
-for g,_ in pairs(_0xDDB1) do
+for g,_ in pairs(_0xD722) do
 pcall(function() if g and g.Parent then g.Enabled=true end end)
 end
-_0xDDB1={}
+_0xD722={}
 end
 end})
 
-local _0x584C=false
-local _0xB8DA=500
-local _0xB6CD=0.3
-_0xF1D3:CreateToggle({Name="Auto Collect",CurrentValue=false,Flag="AC",Callback=function(V)
-_0x584C=V
+local _0xED6A=false
+local _0x1414=500
+local _0xF157=0.3
+_0x4818:CreateToggle({Name="Auto Collect",CurrentValue=false,Flag="AC",Callback=function(V)
+_0xED6A=V
 if V then spawn(function()
-while _0x584C do
-local _0x61EF=_0x75BC.Character
-if _0x61EF and _0x61EF:FindFirstChild("HumanoidRootPart") then
-local _0x0F40=_0x61EF.HumanoidRootPart
-local _0x8F00=_0x0F40.Position
-local _0x6BD1=nil
-local _0x5128=_0xB8DA
+while _0xED6A do
+local _0x5985=_0x5413.Character
+if _0x5985 and _0x5985:FindFirstChild("HumanoidRootPart") then
+local _0x957B=_0x5985.HumanoidRootPart
+local _0x798F=_0x957B.Position
+local _0x0191=nil
+local _0xDE27=_0x1414
 for _,o in ipairs(workspace:GetDescendants()) do
 if o:IsA("ProximityPrompt") and o.Enabled and o.Parent and o.Parent:IsA("BasePart") then
-local _0xF288=o.Parent.Parent
-if _0xF288 and _0xF288:IsA("Model") and _0x5502(_0xF288.Name) then
-local _0xAA2A=(o.Parent.Position-_0x8F00).Magnitude
-if _0xAA2A<_0x5128 then _0x5128=_0xAA2A _0x6BD1=o end
+local _0xC0F7=o.Parent.Parent
+if _0xC0F7 and _0xC0F7:IsA("Model") and _0xD5A7(_0xC0F7.Name) then
+local _0x2559=(o.Parent.Position-_0x798F).Magnitude
+if _0x2559<_0xDE27 then _0xDE27=_0x2559 _0x0191=o end
 end
 end
 end
-if _0x6BD1 then
-_0x0F40.CFrame=CFrame.new(_0x6BD1.Parent.Position+Vector3.new(0,2,0))
+if _0x0191 then
+_0x957B.CFrame=CFrame.new(_0x0191.Parent.Position+Vector3.new(0,2,0))
 task.wait(0.1)
 pcall(function()
-_0x6BD1.RequiresLineOfSight=false
-_0x6BD1.MaxActivationDistance=999
-_0x6BD1:InputHoldBegin()
-task.wait(_0x6BD1.HoldDuration+0.05)
-_0x6BD1:InputHoldEnd()
+_0x0191.RequiresLineOfSight=false
+_0x0191.MaxActivationDistance=999
+_0x0191:InputHoldBegin()
+task.wait(_0x0191.HoldDuration+0.05)
+_0x0191:InputHoldEnd()
 end)
-task.wait(_0xB6CD)
+task.wait(_0xF157)
 else
 task.wait(1)
 end
@@ -631,7 +634,7 @@ end
 end)
 end
 end})
-_0xF1D3:CreateSlider({Name="Rango Detección",Range={50,2000},Increment=50,Suffix="",CurrentValue=500,Flag="ACR",Callback=function(V)_0xB8DA=V end})
-_0xF1D3:CreateSlider({Name="Pausa",Range={0.1,2},Increment=0.1,Suffix="s",CurrentValue=0.3,Flag="ACP",Callback=function(V)_0xB6CD=V end})
+_0x4818:CreateSlider({Name="Rango Detección",Range={50,2000},Increment=50,Suffix="",CurrentValue=500,Flag="ACR",Callback=function(V)_0x1414=V end})
+_0x4818:CreateSlider({Name="Pausa",Range={0.1,2},Increment=0.1,Suffix="s",CurrentValue=0.3,Flag="ACP",Callback=function(V)_0xF157=V end})
 
-_0x6308:Notify({Title="Listo",Content="ScriptPRIVATE MAX por MÉXICAN_MODIFICADOR🇲🇽",Duration=3})
+_0x2A99:Notify({Title="Listo",Content="ScriptPRIVATE por MÉXICAN_MODIFICADOR🇲🇽",Duration=3})
